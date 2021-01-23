@@ -1,66 +1,99 @@
+html {
+    box-sizing: border-box;
+}
+
 body {
     background-color: dodgerblue;
     font-family: 'Roboto', sans-serif;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 
 }
 
-.container {
+.panel {
     background-color: white;
     border: 1px solid transparent;
-    border-radius: 5%;
+    border-radius: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
-    padding: 30px;
-}
-
-
-.container h2 {
-    color: grey;
-    text-transform: uppercase;
-    text-align: center;
-    padding-bottom: 30px;
-    border-bottom: 1px grey solid;
-}
-
-.container h3 {
-    color:navy;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: normal;
-}
-
-.container h4 {
-    color: navy;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.personal button {
-    background-color: white;
-    color: navy;
-    padding: 10px 20px;
-    border: 1px solid dodgerblue;
-    border-radius: 5%;
-    text-transform: uppercase;
-}
-
-button {
-    background-color: dodgerblue;
-    color: white;
-    padding: 10px 20px;
-    border: 1px solid dodgerblue;
-    border-radius: 5%;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 960px;
     text-transform: uppercase;
 }
 
 section {
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    align-items: center;
+    border-bottom: 1px solid grey;
+    text-align: center;
+}
 
+section:last-child {
+    border-bottom: none;
+}
+
+.pricing-image {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.pricing-header {
+    color: #888;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.pricing-feature {
+    margin: 50px 0 25px;
+    color: #016FF9;
+}
+
+.pricing-feature-items {
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px;
+    border-top: 1px solid #e1f1ff;
+}
+
+.pricing-features-items:last-child {
+    border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-price {
+    color: #016ff9;
+    font-size: 32px;
+    font-weight: 700;
+    display: block;
+}
+
+.pricing-button {
+    border: 1px solid #9DD1FF;
+    border-radius: 10px;
+    color: #348efe;
+    display: inline-block;
+    padding: 15px 35px;
+    margin: 25px 0;
+    transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover, .pricing-button:focus {
+    background-color: #e1f1ff;
+
+}
+
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+    }
+    section {
+        border-bottom: none;
+        border-right: 1px solid grey;
+        padding: 25px 50px;
+    }
+    section:last-child {
+        border-right: none;
+    }
 }
